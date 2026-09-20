@@ -7,3 +7,11 @@
 @media(max-width:1000px){.agenda-list>div{grid-template-columns:140px 1fr}.agenda-list small{grid-column:2}.topic-status{align-items:flex-start;flex-direction:column}}
 @media(max-width:760px){.question-grid{grid-template-columns:1fr}.agenda-list>div{grid-template-columns:1fr}.agenda-list small{grid-column:auto}.prep-row{flex-direction:column;gap:8px}.topic-status .quick-status{width:100%}.quick-status button{padding:8px 10px}.status-cell{min-width:265px}.inline-editor{padding:16px}.page{padding-top:22px}}
 @media print{.inline-editor,.optional:not([open]),.quick-status{display:none!important}.agenda-list,.question-grid .card,.topic-status{break-inside:avoid}.agenda-list>div{grid-template-columns:150px 1fr 160px}.status-cell{min-width:0;width:20%}.table-wrap table{min-width:0}}
+
+/* Speaker context is hidden from the formal meeting view. */
+.presenter-only,.storage-info,.agenda-list small{display:none}
+.show-notes .presenter-only,.show-notes .storage-info,.show-notes .agenda-list small{display:block}
+.agenda-list>div{grid-template-columns:175px 1fr}
+.show-notes .agenda-list>div{grid-template-columns:175px 1fr 190px}
+@media(max-width:760px){.agenda-list>div,.show-notes .agenda-list>div{grid-template-columns:1fr}}
+@media print{.presenter-only,.storage-info,.agenda-list small{display:none!important}}
